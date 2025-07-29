@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEDx NISV - KINETIKOS</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+ <meta charset="UTF-8">
+
+  <style>
+    /* Background Canvas */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🌌 Background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Header -->
+<header>
+  <div class="logo-section">
+    <img src="assets/logo.jpg" alt="TEDx Logo" class="logo" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="about.html">About TEDx</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li>
+        <a href="https://docs.google.com/forms/d/1kNCK1sZeBbU2RAoMaRqMP_Ob46--Acnq15uoTBKRaEk/edit?usp=drivesdk" target="_blank">
+          <button class="register-btn">Register Now</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+  <div class="title-section" data-aos="fade-up">
+    <img src="assets/title.jpg" alt="Kinetikos" class="title-img" />
+    <p class="tagline">SHIFT. SURGE. SUCCEED</p>
+  </div>
+
+  <div class="video-section" data-aos="zoom-in">
+    <video autoplay muted loop>
+      <source src="assets/gear rotation.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <section class="concept-section" data-aos="fade-right">
+    <h2 class="section-title">KINETIKOS<br><span class="highlight">SHIFT . SURGE . SUCCEED</span></h2>
+    <h3 class="concept-heading">Concept Note</h3>
+    <p class="concept-text">
+      What if your idea could ignite a catalyst for the next breakthrough that fosters sustainability, diversity,
+      innovation and empower lives? What if progress meant bringing everyone along and solving real problems with
+      purpose? What if the most powerful move you could make... was simply to begin?
+      <strong>"Kinetikos: Shift. Surge. Succeed."</strong> invites you to explore the science of movement,
+      the psychology of change, and the art of Transformation.
+      <br><br>
+      This theme seeks to resonate with the thinkers, the creators, and the changemakers, the ones who refuse to stay in place.
+      Whether it’s a scientist unlocking the secrets of energy, an entrepreneur launching the next big idea or an individual
+      pushing past obstacles to move forward, Kinetikos is the essence of progress.
+      <br><br>
+      The most groundbreaking ideas, the most revolutionary moments, and the most inspiring individuals all share one thing in common:
+      they don’t wait. They spark movement. They propel forward because the future belongs to those who dare to move.
+    </p>
+  </section>
+
+<section class="speakers-section">
+  <h2 class="speakers-title">Our Speakers</h2>
+
+  <!-- Row 1: 2 speakers -->
+  <div class="speakers-grid row-2">
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/himadri.jpg" alt="Speaker 1" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Himadri Sinha</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Aarohi Joshi.png" alt="Speaker 2" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Aarohi Joshi</strong></div>
+    </div>
+  </div>
+
+  <!-- Row 2: 4 speakers -->
+  <div class="speakers-grid row-4">
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/speaker-1.jpeg" alt="Speaker 3" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Vijaya Suvarna</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/akash.jpg" alt="Speaker 4" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Akash Tandon</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Vidita Naik.png" alt="Speaker 5" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Vidita Naik</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Dhrumi Anklesaria.png" alt="Speaker 6" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Dhrumi Anklesaria</strong></div>
+    </div>
+  </div>
+
+  <!-- Row 3: 4 speakers -->
+  <div class="speakers-grid row-4">
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Sriram.jpg" alt="Speaker 7" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Sriram Ayer</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/chetan.jpg" alt="Speaker 8" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Chetan Solanki</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Prayosha-1.jpg" alt="Speaker 9" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Prayosha Vora</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Janhavi Atordia.png" alt="Speaker 10" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Janhavi Atordia</strong></div>
+    </div>
+  </div>
+
+  <!-- Row 4: 2 speakers -->
+  <div class="speakers-grid row-2">
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/manny.jpg" alt="Speaker 11" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Manny Anchan</strong></div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="assets/Kunank Sinha.png" alt="Speaker 12" style="width: 200px;height: 200px;object-fit:cover;">
+      </div>
+      <div class="speaker-name"><strong>Kunank Sinha</strong></div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="licensee-section" data-aos="fade-right">
+  <h2 class="licensee-title">Licensee</h2>
+  <div class="licensee-card" data-aos="flip-left">
+    <img src="assets/licensee.jpg" alt="Licensee-Photo" class="licensee-photo" />
+    <p class="licensee-name"><strong>Ms. Kashmira Jaiswal</strong></p>
+    <p class="licensee-role">Meet Kashmira Jaiswal, our dynamic mentor, license holder, and Principal of Navrachana International School (NISV CBSE). 
+      As a CBSE National Awardee, she exemplifies excellence in teaching and school leadership. She's a perfect mix of funny, goofy, and strict—a triple threat! 
+      Whether she's cracking jokes or laying down the law, Kashmira Ma'am is the guiding star we all look up to. She is also a recipient of the Global 
+      Leadership in Education Award (2016) from the Education Council of India, the ILEP (USA) Fellowship Award (2015), and the Pearson Teaching Award (2013). 
+      A passionate English Language Teacher and collaborator, she serves as a Resource Person for the Centre of Excellence, COE- CBSE. She has authored text-books
+      for English Language Learners. As a drama enthusiast, she writes and directs children's theatre. Nurturing a strong bond with her students and alumni, she 
+      continues to inspire and lead with dedication and passion.</p>
+  </div>
+
+ <section class="sponsors-section" data-aos="fade-left">
+  <h2 class="sponsors-title">Our Sponsors</h2>
+  <div class="sponsors-section" data-aos="fade-up"></div>
+    <div class="sponsors-grid">
+      <div class="sponsor-photo">
+        <img src="assets/sponsor/1.jpg" alt="Sponsor 1">
+      </div>
+      <div class="sponsor-photo">
+        <img src="assets/sponsor/2.jpg" alt="Sponsor 2">
+      </div>
+      <div class="sponsor-photo">
+        <img src="assets/sponsor/3.jpg" alt="Sponsor 3">
+      </div>
+      <div class="sponsor-photo">
+        <img src="assets/sponsor/4.jpg" alt="Sponsor 4">
+      </div>
+      <div class="sponsor-photo">
+        <img src="assets/sponsor/5.jpg" alt="Sponsor 5">
+      </div>
+      <div class="sponsor-photo">
+        <img src="assets/sponsor/6.jpg" alt="Sponsor 6">
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- 🌌 Background Animation Script -->
+<script>
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  const numStars = 150;
+  const maxDistance = 130;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  class Star {
+    constructor() {
+      this.reset();
+    }
+
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.radius = Math.random() * 1.5 + 0.5;
+      this.dx = (Math.random() - 0.5) * 0.5;
+      this.dy = (Math.random() - 0.5) * 0.5;
+      this.alpha = Math.random() * 0.5 + 0.5;
+    }
+
+    update() {
+      this.x += this.dx;
+      this.y += this.dy;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 0, 0, ${this.alpha})`; // Red stars
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = 'red';
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  function initStars() {
+    stars = [];
+    for (let i = 0; i < numStars; i++) {
+      stars.push(new Star());
+    }
+  }
+
+  function drawLines() {
+    for (let i = 0; i < stars.length; i++) {
+      for (let j = i + 1; j < stars.length; j++) {
+        const dx = stars[i].x - stars[j].x;
+        const dy = stars[i].y - stars[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < maxDistance) {
+          const alpha = 1 - dist / maxDistance;
+          ctx.beginPath();
+          ctx.moveTo(stars[i].x, stars[i].y);
+          ctx.lineTo(stars[j].x, stars[j].y);
+          ctx.strokeStyle = `rgba(255, 0, 0, ${alpha})`; // Red lines
+          ctx.lineWidth = 1.0;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const star of stars) {
+      star.update();
+      star.draw();
+    }
+    drawLines();
+    requestAnimationFrame(animate);
+  }
+
+  initStars();
+  animate();
+</script>
+</body>
+</html>

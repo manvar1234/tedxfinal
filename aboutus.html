@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | TEDx NISV - KINETIKOS</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: black;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .register-btn {
+      background-color: red;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    nav ul li a,
+    .register-btn {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .about-page {
+      max-width: 900px;
+      margin: 80px auto 150px;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .logo {
+        height: 40px;
+      }
+
+      .about-page {
+        margin: 60px auto 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌌 Background Canvas -->
+  <canvas id="bg-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></canvas>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo-section">
+      <a href="index.html">
+        <img src="assets/logo.jpg" alt="TEDx Logo" class="logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About TEDx</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li>
+          <a href="https://docs.google.com/forms/d/1kNCK1sZeBbU2RAoMaRqMP_Ob46--Acnq15uoTBKRaEk/edit?usp=drivesdk" target="_blank">
+            <button class="register-btn">Register Now</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <main class="about-page" data-aos="fade-up">
+    <h2 class="section-title">About Us</h2>
+    <p class="about-text">
+      TEDxNISV is a student-led initiative curated and executed by learners at NISV.
+      With the belief that powerful ideas can come from anyone, regardless of age, we aim to showcase voices that deserve to be heard.
+      <br><br>
+      Rooted in the global TED spirit of "Ideas Worth Spreading," our event serves as a platform for innovation, personal stories,
+      and transformative visions that can inspire change and create impact. Each edition revolves around a unique theme that sparks
+      curiosity and invites thoughtful discussion.
+      <br><br>
+      With KINETIKOS – Shift. Surge. Succeed. – we explore the essence of momentum, transformation, and progress.
+      From science and psychology to art and activism, our stage welcomes stories that move.
+    </p>
+  </main>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- 🌠 Constellation Animation Script -->
+  <script>
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    const numStars = 150;
+    const maxDistance = 130;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Star {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 1.5 + 0.5;
+        this.dx = (Math.random() - 0.5) * 0.5;
+        this.dy = (Math.random() - 0.5) * 0.5;
+        this.alpha = Math.random() * 0.5 + 0.5;
+      }
+      update() {
+        this.x += this.dx;
+        this.y += this.dy;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 0, 0, ${this.alpha})`;
+        ctx.shadowBlur = 5;
+        ctx.shadowColor = 'red';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    function initStars() {
+      stars = [];
+      for (let i = 0; i < numStars; i++) {
+        stars.push(new Star());
+      }
+    }
+
+    function drawLines() {
+      for (let i = 0; i < stars.length; i++) {
+        for (let j = i + 1; j < stars.length; j++) {
+          const dx = stars[i].x - stars[j].x;
+          const dy = stars[i].y - stars[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < maxDistance) {
+            const alpha = 1 - dist / maxDistance;
+            ctx.beginPath();
+            ctx.moveTo(stars[i].x, stars[i].y);
+            ctx.lineTo(stars[j].x, stars[j].y);
+            ctx.strokeStyle = `rgba(255, 0, 0, ${alpha})`;
+            ctx.lineWidth = 1.0;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (const star of stars) {
+        star.update();
+        star.draw();
+      }
+      drawLines();
+      requestAnimationFrame(animate);
+    }
+
+    initStars();
+    animate();
+  </script>
+</body>
+</html>

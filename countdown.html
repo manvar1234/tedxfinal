@@ -1,0 +1,66 @@
+<title>Countdown Timer</title>
+  <style>
+    body {
+      background: black;
+      color: red;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    .label {
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    .time {
+      margin: 0 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="countdown" id="countdown">
+  <div class="time"><span id="days">--</span><div class="label">Days</div></div>
+  <div class="time"><span id="hours">--</span><div class="label">Hours</div></div>
+  <div class="time"><span id="minutes">--</span><div class="label">Minutes</div></div>
+  <div class="time"><span id="seconds">--</span><div class="label">Seconds</div></div>
+</div>
+
+<script>
+  // Set the target date (adjust as needed)
+  const targetDate = new Date("August 8, 2025 7:59:59").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "🚀 Event Started!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // initial call
+</script>
